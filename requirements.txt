@@ -1,2 +1,8 @@
 streamlit
 openai
+nx-arangodb
+nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com 
+langchain
+langchain-community
+langchain-openai
+langgraph
