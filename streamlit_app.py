@@ -35,17 +35,22 @@ else:
     st.session_state.suggestions_list = list([
         'What is most influencial node in the graph ?'
     ])
+    st.session_state.suggestions_icons = list([
+        'icon'
+    ])
 
     predefined_prompt_selected = st.pills("Query suggestions:",
                                           st.session_state.suggestions_list,
                                           # st.session_state.suggestions_icons,
-                                          index=st.session_state.pills_index
+                                          # index=st.session_state.pills_index,
+                                          selection_mode="single"
                                           )
 
     # Get rid of the suggestion now that it was chosen
     if predefined_prompt_selected:
         index_to_eliminate = st.session_state.suggestions_list.index(predefined_prompt_selected)
         st.session_state.suggestions_list.pop(index_to_eliminate)
+        st.markdown(f"Your selected options: {predefined_prompt_selected}.")
         # st.session_state.suggestions_icons.pop(index_to_eliminate)
 
     # Create a chat input field to allow the user to enter a message. This will display
