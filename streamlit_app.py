@@ -38,7 +38,7 @@ else:
 
     predefined_prompt_selected = st.pills("Query suggestions:",
                                           st.session_state.suggestions_list,
-                                          st.session_state.suggestions_icons,
+                                          # st.session_state.suggestions_icons,
                                           index=st.session_state.pills_index
                                           )
 
